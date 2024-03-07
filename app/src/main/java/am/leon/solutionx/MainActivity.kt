@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity(), SingleSelectionCallback {
 
     private lateinit var binding: ActivityMainBinding
     private val adapter: SingleSelectionAdapter by lazy {
+        // You can change the viewType here....
         SingleSelectionAdapter(SingleSelectionViewType.SELECTION_CHECK, this)
     }
 
@@ -33,7 +34,10 @@ class MainActivity : AppCompatActivity(), SingleSelectionCallback {
         }
         viewInit()
 
-        adapter.setItems(Mockups.getCountries(this))
+        binding.btnFetchData.setOnClickListener {
+            // You can change the list here....
+            adapter.setItems(Mockups.getCountries(this))
+        }
     }
 
     private fun viewInit() = with(binding) {
