@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
 }
 
 android {
@@ -68,6 +69,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.constraintlayout)
 
     // Material
@@ -75,4 +77,11 @@ dependencies {
 
     // Kotlin Reflect
     implementation(libs.kotlin.reflect)
+
+    // SDP && SSP
+    implementation(libs.intuit.sdp)
+    implementation(libs.intuit.ssp)
+
+    // GSON
+    implementation(libs.google.gson)
 }

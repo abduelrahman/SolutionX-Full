@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:drawable="@drawable/layer_item_single_default_radio_selection" android:state_selected="false" />
+
+    <item android:drawable="@drawable/layer_item_single_selected_radio_selection" android:state_selected="true" />
+
+</selector>
