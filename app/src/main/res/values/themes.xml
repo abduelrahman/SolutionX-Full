@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.SolutionXFull" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
@@ -6,4 +6,84 @@
     </style>
 
     <style name="Theme.SolutionXFull" parent="Base.Theme.SolutionXFull" />
+
+    // ------------------------------------------- Fonts -------------------------------------------
+
+    <style name="Font" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/app_font_regular</item>
+    </style>
+
+    <style name="Font.Medium" parent="Font">
+        <item name="android:fontFamily">@font/app_font_medium</item>
+    </style>
+
+    <style name="Font.Bold" parent="Font">
+        <item name="android:fontFamily">@font/app_font_bold</item>
+    </style>
+
+    // ------------------------------------------- TextView ----------------------------------------
+
+    <style name="TextView" parent="Widget.MaterialComponents.TextView">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">start|center</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textAppearance">@style/Font</item>
+        <item name="fontStyle">normal</item>
+    </style>
+
+    <style name="TextView.Medium" parent="TextView">
+        <item name="android:textAppearance">@style/Font.Medium</item>
+    </style>
+
+    <style name="TextView.Bold" parent="TextView">
+        <item name="android:textAppearance">@style/Font.Bold</item>
+    </style>
+
+    <style name="TextView.Error" parent="TextView">
+        <item name="android:textColor">@android:color/holo_red_light</item>
+    </style>
+
+    // ------------------------------------------- Button ------------------------------------------
+
+    <style name="Button" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:text">@string/app_name</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textAppearance">@style/Font.Medium</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:gravity">center</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="Button.OutLine" parent="Button">
+        <item name="strokeWidth">2dp</item>
+        <item name="strokeColor">@android:color/black</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:backgroundTint">@android:color/white</item>
+    </style>
+
+    <style name="Button.Secondary" parent="Button">
+        <item name="strokeWidth">0dp</item>
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/holo_purple</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="Button.Delete" parent="Button">
+        <item name="strokeWidth">0dp</item>
+        <item name="strokeColor">@android:color/transparent</item>
+        <item name="android:backgroundTint">@android:color/holo_red_light</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>
