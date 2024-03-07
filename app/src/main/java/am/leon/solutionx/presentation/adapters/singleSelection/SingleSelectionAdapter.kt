@@ -111,8 +111,11 @@ class SingleSelectionAdapter(
             txtItemName.text = item.name
             root.isSelected = isItemSelected
 
-            if (item.getIconRes() != -1)
+            imgItem.visibility = if (item.getIconRes() != -1) {
                 imgItem.setImageResource(item.getIconRes())
+                View.VISIBLE
+            } else
+                View.GONE
         }
 
         override fun onClick(view: View) {
