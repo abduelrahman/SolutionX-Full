@@ -1,4 +1,4 @@
-package am.leon.solutionx.domain.models
+package am.leon.solutionx.features.services.currency.domain.models
 
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelection
 import android.os.Parcelable

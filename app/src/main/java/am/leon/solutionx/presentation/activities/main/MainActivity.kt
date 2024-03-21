@@ -1,8 +1,8 @@
-package am.leon.solutionx
+package am.leon.solutionx.presentation.activities.main
 
+import am.leon.solutionx.R
 import am.leon.solutionx.android.helpers.logging.getClassLogger
 import am.leon.solutionx.databinding.ActivityMainBinding
-import am.leon.solutionx.domain.Mockups
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelection
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionAdapter
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionCallback
@@ -10,6 +10,7 @@ import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionVi
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
@@ -17,6 +18,8 @@ import androidx.core.view.WindowInsetsCompat
 class MainActivity : AppCompatActivity(), SingleSelectionCallback {
 
     private lateinit var binding: ActivityMainBinding
+    private val mainVM: MainVM by viewModels<MainVM>()
+
     private val adapter: SingleSelectionAdapter by lazy {
         // You can change the viewType here....
         SingleSelectionAdapter(SingleSelectionViewType.SELECTION_CHECK, this)
@@ -33,11 +36,14 @@ class MainActivity : AppCompatActivity(), SingleSelectionCallback {
             insets
         }
         viewInit()
+        subscribeToObservables()
 
         binding.btnFetchData.setOnClickListener {
-            // You can change the list here....
-            adapter.setItems(Mockups.getCountries(this))
+            mainVM.getCountries()
         }
+    }
+
+    private fun subscribeToObservables() {
     }
 
     private fun viewInit() = with(binding) {

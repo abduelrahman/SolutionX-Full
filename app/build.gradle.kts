@@ -1,7 +1,9 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    alias(libs.plugins.google.hilt)
     id("kotlin-parcelize")
+    id("kotlin-kapt")
 }
 
 android {
@@ -81,10 +83,15 @@ dependencies {
 
     // Android
     implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.fragment)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.constraintlayout)
+
+    // Android LifeCycle
+    implementation(libs.androidx.lifecycle.livedata)
+    implementation(libs.androidx.lifecycle.runtime)
 
     // Material
     implementation(libs.material)
@@ -98,4 +105,9 @@ dependencies {
 
     // GSON
     implementation(libs.google.gson)
+
+    // Hilt
+    implementation(libs.google.hilt.android)
+    kapt(libs.google.hilt.android.compiler)
+
 }
