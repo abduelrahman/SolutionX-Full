@@ -1,14 +1,13 @@
 package am.leon.solutionx
 
+import am.leon.solutionx.android.helpers.logging.getClassLogger
 import am.leon.solutionx.databinding.ActivityMainBinding
 import am.leon.solutionx.domain.Mockups
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelection
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionAdapter
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionCallback
 import am.leon.solutionx.presentation.adapters.singleSelection.SingleSelectionViewType
-import am.leon.solutionx.android.helpers.logging.getClassLogger
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -46,14 +45,8 @@ class MainActivity : AppCompatActivity(), SingleSelectionCallback {
     }
 
     override fun onSingleItemSelected(selectedItem: SingleSelection) {
-        Log.i("MainActivity", "onSingleItemSelected: $selectedItem")
+        logger.warning("onSingleItemSelected: $selectedItem")
         Toast.makeText(this, selectedItem.name, Toast.LENGTH_SHORT).show()
-
-        logger.debug("This is a debug log....")
-        logger.info("This is an info log....")
-        logger.warning("This is a warning log....")
-        logger.error("This is an error log....")
-        logger.error("This is an error log with throwable....", Throwable("Exception....."))
     }
 
     companion object {
