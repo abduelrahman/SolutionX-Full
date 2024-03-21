@@ -55,6 +55,20 @@ android {
     kotlinOptions {
         jvmTarget = JavaVersion.VERSION_17.toString()
     }
+
+    androidComponents {
+        beforeVariants { variant ->
+            val isReleaseWithLogCatOrLogWriterFlavor = variant.buildType == "release" &&
+                    variant.productFlavors.any { it.second in listOf("logCat", "logWriter") }
+
+            val isDebugWithProductionFlavor =
+                variant.buildType == "debug" && variant.productFlavors.any { it.second == "production" }
+
+            if (isReleaseWithLogCatOrLogWriterFlavor || isDebugWithProductionFlavor) {
+                variant.enable = false
+            }
+        }
+    }
 }
 
 dependencies {
