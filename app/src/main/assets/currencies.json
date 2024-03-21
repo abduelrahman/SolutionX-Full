@@ -1,0 +1,58 @@
+{
+  "data": [
+    {
+      "id": 1,
+      "name": "American Dollar",
+      "sign": "$",
+      "code": "USD"
+    },
+    {
+      "id": 2,
+      "name": "Euro",
+      "sign": "\u20ac",
+      "code": "EUR"
+    },
+    {
+      "id": 3,
+      "name": "Egyptian Pound",
+      "sign": "LE",
+      "code": "EGP"
+    },
+    {
+      "id": 4,
+      "name": "Saudi Riyal",
+      "sign": "SAR",
+      "code": "SAR"
+    },
+    {
+      "id": 5,
+      "name": "Emirati Dirham",
+      "sign": "AED",
+      "code": "AED"
+    },
+    {
+      "id": 6,
+      "name": "Kuwaiti Dinar",
+      "sign": "KWD",
+      "code": "KWD"
+    },
+    {
+      "id": 7,
+      "name": "Qatari Riyal",
+      "sign": "QAR",
+      "code": "QAR"
+    },
+    {
+      "id": 8,
+      "name": "Bahraini Dinar",
+      "sign": "BHD",
+      "code": "BHD"
+    },
+    {
+      "id": 9,
+      "name": "Omani Riyal",
+      "sign": "OMR",
+      "code": "OMR"
+    }
+  ]
+}

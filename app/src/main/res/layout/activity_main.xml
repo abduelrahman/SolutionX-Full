@@ -1,35 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <com.google.android.material.textview.MaterialTextView
-        style="@style/TextView.Bold"
-        android:text="Hello World!"
-        android:textSize="20sp" />
-
-    <com.google.android.material.textview.MaterialTextView
-        style="@style/TextView"
-        android:text="This is a test app." />
-
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_fetchData"
         style="@style/Button"
-        android:layout_marginTop="16dp"
-        android:text="Primary Button" />
+        android:layout_margin="@dimen/_16sdp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Fetch Data" />
 
-    <com.google.android.material.button.MaterialButton
-        style="@style/Button.Secondary"
-        android:layout_marginTop="16dp"
-        android:text="Secondary Button" />
-
-    <com.google.android.material.button.MaterialButton
-        style="@style/Button.Delete"
-        android:layout_marginTop="16dp"
-        android:text="Delete Button" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_singleSelection"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_single_radio" />
 
 </LinearLayout>

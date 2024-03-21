@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/selector_item_single_check_selection"
+    android:gravity="center"
+    android:minHeight="@dimen/_36sdp"
+    android:orientation="horizontal"
+    android:paddingStart="@dimen/_19sdp"
+    android:paddingEnd="@dimen/_19sdp">
+
+    <TextView
+        android:id="@+id/txt_itemName"
+        style="@style/TextView"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:maxLines="1"
+        android:textSize="@dimen/_12ssp"
+        tools:text="@tools:sample/first_names" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_check"
+        android:layout_width="@dimen/_20sdp"
+        android:layout_height="@dimen/_20sdp"
+        android:src="@drawable/ic_check"
+        android:visibility="gone" />
+
+</LinearLayout>
